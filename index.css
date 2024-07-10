@@ -1,9 +1,4 @@
-/* :root {
-  --colour-first: #06d001;
-  --colour-third: #9bec00;
-  --colour-forth: #f3ff90;
-}
-
+/* 
 * {
   box-sizing: border-box;
 }
@@ -69,18 +64,10 @@ h1 {
   background-color: var(--colour-first);
 }
 
-.ingredients-container {
-  margin: 2rem 0;
-  display: flex;
-  border: 2px solid var(--colour-third);
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
-}
+
 
 .ingredients-item {
   display: flex;
-  /* padding: 0.2rem 0.5rem; */
   border-radius: 1rem;
 }
 
@@ -121,4 +108,16 @@ h1 {
 .recipe-result img {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
-} */
+} 
+*/
+
+:root {
+  --colour-first: #06d001;
+  --colour-third: #9bec00;
+  --colour-forth: #f3ff90;
+}
+
+.ingredients-container {
+  border: 1px solid var(--colour-first);
+  border-radius: 15px;
+}
