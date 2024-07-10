@@ -1,0 +1,124 @@
+:root {
+  --colour-first: #06d001;
+  --colour-third: #9bec00;
+  --colour-forth: #f3ff90;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  background-image: url();
+  background-repeat: no-repeat;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 110vh;
+  max-width: 70%;
+}
+
+nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.nav-link {
+  color: var(--colour-first);
+  font-weight: bold;
+  padding: 0 0.5rem;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--colour-first);
+}
+
+.form-input {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  background-color: var(--colour-forth);
+  border: 1px solid var(--colour-forth);
+}
+
+.form-submit {
+  border: 2px solid var(--colour-first);
+  padding: 0.2rem 0.5rem;
+  border-radius: 15px;
+  color: var(--colour-first);
+  background: transparent;
+}
+
+.form-submit:hover {
+  border: 2px solid white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 15px;
+  color: white;
+  background-color: var(--colour-first);
+}
+
+.ingredients-container {
+  margin: 2rem 0;
+  display: flex;
+  border: 2px solid var(--colour-third);
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+}
+
+.ingredients-item {
+  display: flex;
+  /* padding: 0.2rem 0.5rem; */
+  border-radius: 1rem;
+}
+
+.ingredients-item p {
+  margin: 0;
+}
+
+.ingredients-item--delete {
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+
+.ingredients-item--delete:hover {
+  transform: scale(1.5);
+}
+
+.ingredients-item-meat {
+  background-color: red;
+}
+
+.ingredients-item-fish {
+  background-color: cyan;
+}
+
+.ingredients-item-veg {
+  background-color: lightgreen;
+}
+
+.recipe-result {
+  border-radius: 15px;
+  border: 2px solid var(--colour-first);
+  background-color: var(--colour-third);
+  display: flex;
+  gap: 1rem;
+}
+
+.recipe-result img {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
