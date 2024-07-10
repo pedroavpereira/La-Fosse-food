@@ -4,92 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Food Recipes</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #28a745; /* Bootstrap green */
+        }
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+        .jumbotron {
+            background-color: #28a745; /* Bootstrap green */
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .recipe-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .recipe {
+            margin-bottom: 30px;
+        }
+        .contact-form {
+            background-color: #f2f2f2;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #28a745; /* Bootstrap green */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Delicious Food Recipes</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Delicious Recipes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#recipes">Recipes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about-us">About Us</a>
+                    <a class="nav-link" href="#contact">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact-us">Contact Us</a>
+                    <a class="nav-link" href="#contact">Contact Us</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <br>
-    <br>
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1>Welcome to Delicious Recipes</h1>
+        <p>Discover tasty and healthy recipes</p>
+    </div>
 
-    <div class="container-md">
+    <!-- Recipes Section -->
+    <div class="container" id="recipes">
+        <h2 class="text-center">Recipes</h2>
         <div class="row">
-            <div class="col-md-12">
-                <h1 id="home" class="text-center">Welcome to Delicious Food Recipes!</h1>
-                <p class="lead">This is the home page of our website. Here, you can find a collection of delicious food recipes from around the world.</p>
+            <div class="col-md-4 recipe">
+                <img src="https://via.placeholder.com/300" class="recipe-img" alt="Recipe 1">
+                <h4>Recipe 1</h4>
+                <p>Delicious and easy to make.</p>
+            </div>
+            <div class="col-md-4 recipe">
+                <img src="https://via.placeholder.com/300" class="recipe-img" alt="Recipe 2">
+                <h4>Recipe 2</h4>
+                <p>Healthy and tasty.</p>
+            </div>
+            <div class="col-md-4 recipe">
+                <img src="https://via.placeholder.com/300" class="recipe-img" alt="Recipe 3">
+                <h4>Recipe 3</h4>
+                <p>Perfect for any occasion.</p>
             </div>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <h2 id="recipes" class="text-center">Recipes</h2>
-                <p class="lead">Here are some of our favorite recipes:</p>
-                <ul class="list-group">
-                    <li class="list-group-item">Recipe 1: Chicken Parmesan</li>
-                    <li class="list-group-item">Recipe 2: Vegetable Stir Fry</li>
-                    <li class="list-group-item">Recipe 3: Chocolate Chip Cookies</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <h2 id="about-us" class="text-center">About Us</h2>
-                <p class="lead">We are a team of food enthusiasts who love to cook and share our favorite recipes with others.</p>
-            </div>
-        </div>
-
-        <div class="container-md">
-            <div class="row">
-              <div class="col-md-12">
-                <h2 id="contact-us" class="text-center">Contact Us</h2>
-                <p class="lead">Get in touch with us:</p>
-              </div>
-            </div>
-          
-            <div class="row">
-              <div class="col-md-6 offset-md-3">
-                <form>
-                  <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea class="form-control" id="message" placeholder="Enter your message"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Message us</button>
+    <!-- Contact Form Section -->
+    <div class="container" id="contact" style="margin-top: 50px;">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Submit</button>
                 </form>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Delicious Recipes - Camelia & Pedro</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
